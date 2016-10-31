@@ -30,6 +30,7 @@ io.on('connection', function (socket) {
   });
 });
 
+socket.emit("datos", "Consulta exitosa desde el server");
 // get is a simple wrapper for request()
 // which sets the http method to GET
 var request = http.get(url, function (response) {
@@ -53,7 +54,7 @@ var request = http.get(url, function (response) {
         console.log("Walking Distance: " + route.legs[0].distance.text);
         console.log("Time: " + route.legs[0].duration.text);
         // extract the distance and time
-        socket.emit("datos", "Consulta exitosa desde el server");
+
         
     }); 
 }); 
