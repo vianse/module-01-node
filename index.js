@@ -6,11 +6,17 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/index.html');
 });
 
+var port = process.env.PORT || 8080;
+
+
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
     console.log('message: ' + msg);
   });
 });
-http.listen(config.port, function () {
-  console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
+app.listen(port, function () {
+
+    console.log('Facebook Messenger Bot on port: ' + port);
+
 });
+
