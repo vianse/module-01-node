@@ -30,7 +30,7 @@ io.on('connection', function (socket) {
   });
 });
 
-socket.emit("datos", "Consulta exitosa desde el server");
+oi.emit("datos", "Consulta exitosa desde el server");
 // get is a simple wrapper for request()
 // which sets the http method to GET
 var request = http.get(url, function (response) {
