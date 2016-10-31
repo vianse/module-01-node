@@ -50,12 +50,10 @@ var request = http.get(url, function (response) {
         console.log("\n");
         data = JSON.parse(buffer);
         route = data.routes[0];
-
-        // extract the distance and time
-        socket.emit("datos", function(data){
-        	 console.log("Walking Distance: " + route.legs[0].distance.text);
+        console.log("Walking Distance: " + route.legs[0].distance.text);
         console.log("Time: " + route.legs[0].duration.text);
-        })
-       
+        // extract the distance and time
+        socket.emit("datos", "Consulta exitosa desde el server")
+        
     }); 
 }); 
