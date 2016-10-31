@@ -52,7 +52,10 @@ var request = http.get(url, function (response) {
         route = data.routes[0];
 
         // extract the distance and time
-        console.log("Walking Distance: " + route.legs[0].distance.text);
+        socket.emit("datos", function(data){
+        	 console.log("Walking Distance: " + route.legs[0].distance.text);
         console.log("Time: " + route.legs[0].duration.text);
+        })
+       
     }); 
 }); 
