@@ -11,7 +11,6 @@ io.on('connection', function(socket){
     console.log('message: ' + msg);
   });
 });
-
-http.listen(5000, function(){
-  console.log('listening on *:5000');
+http.listen(config.port, function () {
+  console.log('Express server listening on %d, in %s mode', config.port, app.get('env'));
 });
