@@ -18,18 +18,5 @@ function handler (req, res) {
 }
 
 io.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
-  });
-});
-
-io.on('connection', function (socket) {
-  socket.emit('datos', "Datos desde el servidor");
-  
-});
-
-io.on('productos', function (data) {
-   socket.emit('resultado', "Datos desde el servidor");
-   alert("hola");
+  socket.emit('resultado', { hello: 'world' });
 });
