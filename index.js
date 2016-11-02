@@ -1,12 +1,12 @@
-// var app = require('http').createServer(handler)
+ var app = require('http').createServer(handler)
 // var io = require('socket.io')(app);
 // var fs = require('fs');
-// var port = process.env.PORT || 8080;
+ var port = process.env.PORT || 8080;
 
 // app.listen(port);
 
 // note, io(<port>) will create a http server for you
-var io = require('socket.io')(8080);
+var io = require('socket.io')(port);
 
 io.on('connection', function (socket) {
   io.emit('this', { will: 'be received by everyone'});
