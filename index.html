@@ -7,7 +7,7 @@
     var socket = io('https://server-node-01.herokuapp.com/');
     socket.on('news', function (data) {
     console.log(data);
-    socket.emit('my other event', { my: 'data' });
+    socket.emit("hello1", { my: 'data' });
   });
 
 </script>
