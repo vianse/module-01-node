@@ -20,6 +20,6 @@ function handler (req, res) {
  io.on('connection', function (socket) {
   socket.emit('news', { hello: 'world' });
 });
-socket.on('resultado', function (data) {
+socket.on('resultado', function (socket) {
     socket.emit('envio', "data");
   });
