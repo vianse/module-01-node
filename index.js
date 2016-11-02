@@ -23,3 +23,10 @@ function handler (req, res) {
     console.log(data);
   });
 });
+
+ io.on('connection', function (socket) {
+  socket.emit('hello', { hello: 'world1' });
+  socket.on('my other event', function (data) {
+    console.log(data);
+  });
+});
