@@ -6,7 +6,7 @@ var port = process.env.PORT || 8080;
 app.listen(port);
 
 function handler (req, res) {
-  fs.readFile(__dirname + '/index.html',
+  fs.readFile(__dirname + '/',
   function (err, data) {
     if (err) {
       res.writeHead(500);
