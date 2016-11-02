@@ -27,6 +27,6 @@ function handler (req, res) {
  io.on('connection', function (socket) {
  socket.emit('hello', data);
   socket.on('resultado', function (data) {
-    alert("hola");
+    socket.emit('hello1', data);
   });
 });
