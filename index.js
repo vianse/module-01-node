@@ -27,13 +27,16 @@ io.on('connection', function (socket) {
     	console.log(data);
     });
   });
-  socket.on('productos', function (data) {
-    console.log(data);
-    socket.emit('datos', data);
-  });
+  
 });
 
 io.on('connection', function (socket) {
   socket.emit('datos', "Datos desde el servidor");
   
 });
+
+
+io.on('productos', function (data) {
+   socket.emit('resultado', "Datos desde el servidor");
+
+  });
