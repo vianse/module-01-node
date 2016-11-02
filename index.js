@@ -17,6 +17,5 @@ function handler (req, res) {
   });
 }
 
-io.on('news', function (socket) {
-  socket.emit('resultado', { hello: 'world' });
-});
+ io.emit('resultado', { hello: 'world' });
+
